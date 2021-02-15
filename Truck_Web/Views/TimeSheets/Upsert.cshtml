@@ -1,0 +1,108 @@
+﻿@model Truck_Web.Models.TimeSheet
+@{ 
+    var title = "Create Time Sheet";
+}
+
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+
+    <div class="row px-2 mx-2 backgroundWhite border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.Id != 0)
+        {
+            title = "Edit Time Sheet";
+        }
+        <div class="col-12 p-3">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Type"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Type" class="form-control" />
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="StartTime"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="StartTime" class="form-control" />
+                    <span asp-validation-for="StartTime" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="M"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="M" class="form-control" />
+                    <span asp-validation-for="M" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="KmStand"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="KmStand" class="form-control" />
+                    <span asp-validation-for="KmStand" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Privat"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Privat" class="form-control" />
+                    <span asp-validation-for="Privat" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Fuel"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Fuel" class="form-control" />
+                    <span asp-validation-for="Fuel" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="AdBlue"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="AdBlue" class="form-control" />
+                    <span asp-validation-for="AdBlue" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Notes"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Notes" class="form-control" />
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4 offset-4">
+                    <button type="submit" class="btn btn-primary form-control">@(Model.Id!=0?"Update":"Create")</button>
+                </div>
+                <div class="col-4">
+                    <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

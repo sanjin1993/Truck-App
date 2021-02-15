@@ -1,0 +1,102 @@
+﻿@*<br />
+    <div class="p-4" style="border-radius:20px;">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text-info">Time Sheet List</h2>
+            </div>
+            <div class="col-6 text-right">
+                <a asp-action="Upsert" class="btn btn-info text-white"><i class="fas fa-plus"></i> &nbsp; Create New Time Sheet </a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="p-3 rounded">
+            <table id="tblData" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr class="table-info">
+                        <th>Day</th>
+                        <th>Type</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Break</th>
+                        <th>Work Time</th>
+                        <th>M</th>
+                        <th>Km Stand</th>
+                        <th>Privat</th>
+                        <th>Fuel</th>
+                        <th>AdBlue</th>
+                        <th>Notes</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    @section Scripts{
+    <script src="/js/timeSheet.js"></script>
+     }*@
+
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    @*<p class="mb-4">
+            DataTables is a third party plugin that is used to generate the demo table below.
+            For more information about DataTables, please visit the <a target="_blank"
+                                                                       href="https://datatables.net">official DataTables documentation</a>.
+        </p>*@
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-2 text-gray-800">Time sheets</h1>
+        <a asp-action="Upsert" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-arrow-right fa-sm text-white-50"></i> Create New Time Sheet
+        </a>
+    </div>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        @*<div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            </div>*@
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="tblData" class="table table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr class="table-info">
+                            <th>Day</th>
+                            <th>Type</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Break</th>
+                            <th>Work Time</th>
+                            <th>M</th>
+                            <th>Km Stand</th>
+                            <th>Privat</th>
+                            <th>Fuel</th>
+                            <th>AdBlue</th>
+                            <th>Notes</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+                @* <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">*@
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-12 text-center">
+        <a asp-action="ExportTimeSheets" class="btn btn-info text-white"><i class="fas fa-plus"></i> &nbsp; Export Time Sheet </a>
+    </div>
+</div>
+<!-- /.container-fluid -->
+
+@section Scripts{
+
+    <script src="/js/timeSheet.js"></script>
+}

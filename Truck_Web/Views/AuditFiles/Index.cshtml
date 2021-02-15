@@ -1,0 +1,28 @@
+﻿<br />
+<div class="p-4" style="border-radius:20px;">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-info">Audit File List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Upsert" asp-controller="AuditFiles" class="btn btn-info text-white"><i class="fas fa-plus"></i> &nbsp; Create New Audit File </a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <table id="tblData" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr class="table-info">
+                <th>DayNo</th>
+                <th>Field</th>
+                <th>Old Value</th>
+                <th>New Value</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts{
+    <script type="module" src="~/js/auditFile.js"></script>
+}

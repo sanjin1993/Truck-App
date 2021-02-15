@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Truck_API</name>
+    </assembly>
+    <members>
+        <member name="M:Truck_WebAPI.Controllers.AuditFilesController.GetAuditFiles">
+            <summary>
+            Get list of audit files.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Truck_WebAPI.Controllers.AuditFilesController.GetAuditFile(System.Int32)">
+            <summary>
+            Get individual audit file
+            </summary>
+            <param name="auditFileId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Truck_WebAPI.Controllers.TimeSheetsController.GetTimeSheets">
+            <summary>
+            Get list of time sheets
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Truck_WebAPI.Controllers.TimeSheetsController.GetTimeSheet(System.Int32)">
+            <summary>
+            Get individual time sheet
+            </summary>
+            <param name="timeSheetId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Truck_WebAPI.Controllers.TimeSheets2Controller.GetTimeSheets">
+            <summary>
+            Get list of time sheets
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
